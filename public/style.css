@@ -1,0 +1,144 @@
+/* General */
+
+:root{
+    --vd-gray: hsl(0, 0%, 17%);
+    --gray: hsl(0, 0%, 59%);
+    --rubik: 'Rubik', sans-serif;
+}
+
+
+/* Global */
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+
+body{
+      font-family: var(--rubik);
+      max-width: 1440px; 
+}
+
+#container{
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+section.hero{
+    background: url(images/pattern-bg.png);
+    height: 45%;
+}
+
+.header h1{
+    padding: 50px 0 30px;
+    color: #fff;
+}
+
+.header input{
+    width: 400px;
+    height: 50px;
+    border-style: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 50px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.header input:focus{
+   outline: none;
+}
+.header button{
+    width: 50px;
+    height: 51px;
+    border: none;
+    background-color: var(--vd-gray);
+    margin-left: -5px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+}
+
+
+section.maparea{
+    position: relative;
+    height: 55%;
+}
+
+.geoboard{
+    position: absolute;
+    z-index: 1000;
+    top: -10%;
+    left: 15%;
+    right: 15%;
+    padding: 25px;
+    max-width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 10px  1px var(--gray);
+    
+}
+
+.geoboard div:not(:last-child){
+    border-right: 1px solid var(--gray);
+}
+
+.geoitems{
+    padding-right: 10px;
+}
+
+.geoitems p{
+    text-transform: uppercase;
+    color: var(--gray);
+    font-weight: 400;
+    padding-bottom: 10px;
+    font-size: .7rem;
+}
+
+
+#map{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+.header input{
+    width: 70%;
+}
+
+section.maparea{
+    height: 100%;
+}
+
+.geoboard{
+    flex-direction: column;
+    max-width: 85%;
+    margin: auto auto;
+}
+
+.geoboard div:not(:last-child){
+    border-right: none;
+}
+
+    
+}

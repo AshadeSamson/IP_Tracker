@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main id="container">
+    <section class="hero">
+      <div class="header">
+        <h1>IP Address Tracker</h1>
+        <form>
+          <input type="text" class="input" placeholder="Search for any IP address or domain">
+          <a class="link"><button type="submit" class="btn"><img  src="images/icon-arrow.svg" alt="search_arrow"></button></a>
+        </form>
+      </div> 
+    </section>
+
+    <section class="maparea">
+      <div class="geoboard">
+        <div class="geoitems ipaddress">
+          <p>ip address</p>
+          <h1 id="iptext"></h1>
+        </div>
+        <div class="geoitems location">
+          <p>location</p>
+          <h1 id="city"></h1>
+        </div>
+        <div class="geoitems timezone">
+          <p>Timezone</p>
+          <h1 id="time"></h1>
+        </div>
+        <div class="geoitems isp">
+          <p>Isp</p>
+          <h1 id="provider"></h1>
+        </div>
+      </div>
+      <div  id="map">
+      </div>
+    </section>
+  </main>
+</body>
+</html>
