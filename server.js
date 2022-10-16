@@ -5,7 +5,8 @@ const server = express();
 require('dotenv').config();
 
 // initializing and setting server up
-server.listen(8000, () => {
+const port = process.env.PORT;
+server.listen(port, () => {
     console.log('server up and running');
 });
 server.use(express.static('public'));
