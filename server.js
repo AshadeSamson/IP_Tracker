@@ -5,9 +5,6 @@ const server = express();
 require('dotenv').config();
 
 // initializing and setting server up
-server.listen(8000, () => {
-    console.log('server up and running');
-});
 server.use(express.static('public'));
 server.use(express.json());
 
@@ -29,5 +26,15 @@ server.get('/resource/:Addr', (req, res) => {
              res.json(data);
             });
 });
+
+// local testing environment
+if (process.env.NODE_ENV !== 'production') {
+    server.listen(process.env.PORT || 0, () => {
+        console.log(`Server running on port ${process.env.PORT || 0}`);
+    });
+}
+
+// export app for vercel/production environment
+export default server;
 
 
