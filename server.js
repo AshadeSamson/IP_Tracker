@@ -1,6 +1,7 @@
 // importing the required packages
 const express = require('express');
 const server = express();
+const fetch = require('node-fetch');
 
 require('dotenv').config();
 
@@ -35,6 +36,6 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // export app for vercel/production environment
-export default server;
+module.exports = server;
 
 
