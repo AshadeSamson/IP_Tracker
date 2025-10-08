@@ -24,8 +24,8 @@ Users should be able to:
 
 - View the optimal layout for each page depending on their device's screen size
 - See hover states for all interactive elements on the page
-- See their own IP address on the map on the initial page load
-- Search for any IP addresses or domains and see the key information and location
+- See their own Virtual IP address on the map on the initial page load
+- Search for any Virtual IP addresses or domains and see the key information and location
 
 
 
@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/AshadeSamson/IP_Tracker](https://github.com/AshadeSamson/IP_Tracker)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://ip-tracker-app.glitch.me](https://ip-tracker-app.glitch.me)
 
 
 
